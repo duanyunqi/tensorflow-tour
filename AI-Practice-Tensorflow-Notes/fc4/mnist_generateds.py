@@ -39,14 +39,14 @@ def write_tfRecord(tfRecordName, image_path, label_path):
     print("write tfrecord successful")
 
 def generate_tfRecord():
-	isExists = os.path.exists(data_path) 
-	if not isExists: 
- 		os.makedirs(data_path)
-		print 'The directory was created successfully'
-	else:
-		print 'directory already exists' 
-	write_tfRecord(tfRecord_train, image_train_path, label_train_path)
- 	write_tfRecord(tfRecord_test, image_test_path, label_test_path)
+    isExists = os.path.exists(data_path)
+    if not isExists:
+        os.makedirs(data_path)
+        print('The directory was created successfully')
+        else:
+        print('directory already exists')
+    write_tfRecord(tfRecord_train, image_train_path, label_train_path)
+    write_tfRecord(tfRecord_test, image_test_path, label_test_path)
   
 def read_tfRecord(tfRecord_path):
     filename_queue = tf.train.string_input_producer([tfRecord_path], shuffle=True)

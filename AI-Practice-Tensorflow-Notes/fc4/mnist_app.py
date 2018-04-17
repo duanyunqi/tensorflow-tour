@@ -48,10 +48,10 @@ def pre_pic(picName):
 def application():
 	testNum = input("input the number of test pictures:")
 	for i in range(testNum):
-		testPic = raw_input("the path of test picture:")
+		testPic = input("the path of test picture:")
 		testPicArr = pre_pic(testPic)
 		preValue = restore_model(testPicArr)
-		print "The prediction number is:", preValue
+		print("The prediction number is:", preValue)
 
 def main():
 	application()
