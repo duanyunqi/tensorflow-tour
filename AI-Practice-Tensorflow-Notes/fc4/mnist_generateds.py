@@ -43,7 +43,7 @@ def generate_tfRecord():
     if not isExists:
         os.makedirs(data_path)
         print('The directory was created successfully')
-        else:
+    else:
         print('directory already exists')
     write_tfRecord(tfRecord_train, image_train_path, label_train_path)
     write_tfRecord(tfRecord_test, image_test_path, label_test_path)
